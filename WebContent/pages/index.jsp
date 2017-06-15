@@ -1,0 +1,86 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>安全农产品溯源公共服务平台</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="public/jquery.min.js"></script>
+</head>
+<body>
+<header>
+<div class="head">
+  <div class="logo">LOGO</div>
+  <nav>
+    <ul>
+      <li><a href="#" class="on">首页</a></li>
+      <li><a href="#">案例展示</a></li>
+      <li><a href="#">消费者指南</a></li>
+      <li><a href="#">监管部门登录</a></li>
+      <li><a href="#">企业用户登录</a></li>
+    </ul>
+  </nav>
+</div>
+</header>
+<div class="banner">
+    <div class="banner_in">
+        <h2>关爱健康，关注产品安全溯源！</h2>
+          <div class="search_box">
+                  <form action="" name="searchForm">
+                      <input type="text"name="tracesource" class="sy_num" placeholder="请输入您的溯源码" />
+                      <input type="button" value="立即追溯" class="sy_btn" onclick="alert('hehe');" />
+                  </form>
+          </div>
+     </div>
+</div>
+<div class="box case">
+  <h1 id="step_1">案例展示</h1>
+      <ul class="case_ul">
+        <li>
+          <img src="<%=request.getContextPath()%>/images/case.png" width="280" height="190">
+          <a href="../pages/pro.html">大米</a>
+        </li>
+        <li>
+          <img src="../images/case.png" width="280" height="190">
+          <h3 class="name">栗子</h3>
+        </li>
+        <li>
+          <img src="../images/case.png" width="280" height="190">
+          <h3 class="name">栗子</h3>
+        </li>
+        <li>
+          <img src="../images/case.png" width="280" height="190">
+          <h3 class="name">栗子</h3>
+        </li>
+        <li>
+          <img src="../images/case.png" width="280" height="190">
+          <h3 class="name">栗子</h3>
+        </li>
+          <li>
+          <img src="../images/case.png" width="280" height="190">
+          <h3 class="name">栗子</h3>
+        </li>
+          <li>
+          <img src="../images/case.png" width="280" height="190">
+          <h3 class="name">栗子</h3>
+        </li>
+          <li>
+          <img src="../images/case.png" width="280" height="190">
+          <h3 class="name">栗子</h3>
+        </li>
+      </ul>
+</div>
+<div class="box zhinan">
+  <h1 id="step_2">消费者使用指南</h1>
+  <div class=""><img src="../images/zhinan.png"  alt="消费者指南" /></div>
+</div>
+<footer>
+        <p>技术支持：<a href="" target="_blank">scau创客空间</a></p>
+        <p>电话：xxx-xxx-xxx </p>
+        <p>邮箱: xxx@xxx.com</p>
+        <p>地址：华南农业大学数学与信息学院院楼809</p>
+</footer>
+<script src="js/index.js"></script>
+</body>
+</html>
