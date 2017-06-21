@@ -9,7 +9,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>五常大米</title>
+		<title>信息维护</title>
 		<link rel="stylesheet" type="text/css" href="../../css/table.css">
 		<style>
 			#step1 {
@@ -55,22 +55,7 @@
 	<body>
 	
 	
-		<div class="box case">
-		  <h1 id="step1">商品信息</h1>
-	      <ul class="case_ul" align="center">
-	        <li>
-	          <img src="../../../images/1.jpg" width="750" height="413">
-	        </li>     
-	      </ul>
-		</div>
-		<div class="box case">
-		  <h1 id="step1">营养成分</h1>
-	      <ul class="case_ul" align="center">
-	        <li>
-	          <img src="../../../images/yingyang.jpg" width="750" height="484">
-	        </li>     
-	      </ul>
-		</div>
+		
 		
 		<!--JDBC 驱动名及数据库 URL--> 
 		<!--数据库的用户名与密码，需要根据自己的设置-->
@@ -82,7 +67,7 @@
 		<sql:query dataSource="${snapshot}" var="result">
 			SELECT * from GOODSATTR;
 		</sql:query>
-		<h1 id="step1">商品详情</h1>
+		<h1 id="step1">信息维护</h1>
 		<table border="1" width="80%" class="datalist" align="center">
 			<tr>
 			   <th>商品ID</th>
@@ -111,7 +96,7 @@
 			</c:forEach>
 			
 		</table>
-		<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+		<%-- <sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 		     url="jdbc:mysql://localhost:3306/AGRICULTURETRACE?useUnicode=true&characterEncoding=utf-8"
 		     user="root"  password="1234"/>
 		<sql:query dataSource="${snapshot}" var="result">
@@ -130,28 +115,10 @@
 			   
 			</tr>
 			</c:forEach>
-		</table>
+		</table> --%>
 		
-		<div class="box case" >
-		  <h1 id="step1">生长环境视频</h1>
-	      <ul class="case_ul" align="center">
-	      
-	        <li >
-	          <video width="640" height="352" controls autoplay >
-	  		  	<source src="../../../upload/3.mp4" type="video/mp4" >
-			  </video>
-	        </li>
-	        
-	      </ul>
-		</div>
 		
-		<div class="box case">
-		  <h1 id="step1">授权信息</h1>
-	      <ul class="case_ul" align="center">
-	        <li>
-	          <img src="../../../images/ShouQuanShu.jpg" width="750" height="339">
-	        </li>     
-	      </ul>
-		</div>
+		
+		
 	</body>
 </html>

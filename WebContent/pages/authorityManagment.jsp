@@ -9,7 +9,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-		<title>五常大米</title>
+		<title>操作监管</title>
 		<link rel="stylesheet" type="text/css" href="../../css/table.css">
 		<style>
 			#step1 {
@@ -55,22 +55,7 @@
 	<body>
 	
 	
-		<div class="box case">
-		  <h1 id="step1">商品信息</h1>
-	      <ul class="case_ul" align="center">
-	        <li>
-	          <img src="../../../images/1.jpg" width="750" height="413">
-	        </li>     
-	      </ul>
-		</div>
-		<div class="box case">
-		  <h1 id="step1">营养成分</h1>
-	      <ul class="case_ul" align="center">
-	        <li>
-	          <img src="../../../images/yingyang.jpg" width="750" height="484">
-	        </li>     
-	      </ul>
-		</div>
+		
 		
 		<!--JDBC 驱动名及数据库 URL--> 
 		<!--数据库的用户名与密码，需要根据自己的设置-->
@@ -80,38 +65,37 @@
 		     url="jdbc:mysql://localhost:3306/AGRICULTURETRACE?useUnicode=true&characterEncoding=utf-8"
 		     user="root"  password="1234"/>
 		<sql:query dataSource="${snapshot}" var="result">
-			SELECT * from GOODSATTR;
+			SELECT * from AUTHORITYMANAGMENT;
 		</sql:query>
-		<h1 id="step1">商品详情</h1>
+		<h1 id="step1">操作监管</h1>
 		<table border="1" width="80%" class="datalist" align="center">
 			<tr>
 			   <th>商品ID</th>
-			   <th>组ID</th>
-			   <th>生产日期</th>
-			   <th>保质期</th>
-			   <th>重量</th>
-			   <th>储存环境</th>
-			   <th>营养</th>
+			   <th>质量许可证号</th>
+			   <th>数据添加日期</th>
+			   <th>数据修改日期</th>
+			   <th>具体操作</th>
+			   <th>操作人员</th>
 			   <th>操作</th>
 			</tr>
 			<c:forEach var="row" items="${result.rows}">
 			<tr align="center">
 			   <td><c:out value="${row.goodsid}"/></td>
-			   <td><c:out value="${row.groupid}"/></td>
-			   <td><c:out value="${row.productdate}"/></td>
-			   <td><c:out value="${row.shelflife}"/></td>
-			   <td><c:out value="${row.weight}"/></td>
-			   <td><c:out value="${row.stcondition}"/></td>
-			   <td><c:out value="${row.nutrition}"/></td>
+			   <td><c:out value="${row.qualitypermitnum}"/></td>
+			   <td><c:out value="${row.addtime}"/></td>
+			   <td><c:out value="${row.changetime}"/></td>
+			   <td><c:out value="${row.operation}"/></td>
+			   <td><c:out value="${row.operator}"/></td>
+			   
 			   <td>
-					<a href="/springMVC1/user/getUser?id=${u.id }">编辑</a>
+					
 					<a href="javascript:del('${u.id }')">删除</a>
 				</td>
 			</tr>
 			</c:forEach>
 			
 		</table>
-		<sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
+		<%-- <sql:setDataSource var="snapshot" driver="com.mysql.jdbc.Driver"
 		     url="jdbc:mysql://localhost:3306/AGRICULTURETRACE?useUnicode=true&characterEncoding=utf-8"
 		     user="root"  password="1234"/>
 		<sql:query dataSource="${snapshot}" var="result">
@@ -131,27 +115,9 @@
 			</tr>
 			</c:forEach>
 		</table>
+		 --%>
 		
-		<div class="box case" >
-		  <h1 id="step1">生长环境视频</h1>
-	      <ul class="case_ul" align="center">
-	      
-	        <li >
-	          <video width="640" height="352" controls autoplay >
-	  		  	<source src="../../../upload/3.mp4" type="video/mp4" >
-			  </video>
-	        </li>
-	        
-	      </ul>
-		</div>
 		
-		<div class="box case">
-		  <h1 id="step1">授权信息</h1>
-	      <ul class="case_ul" align="center">
-	        <li>
-	          <img src="../../../images/ShouQuanShu.jpg" width="750" height="339">
-	        </li>     
-	      </ul>
-		</div>
+		
 	</body>
 </html>
